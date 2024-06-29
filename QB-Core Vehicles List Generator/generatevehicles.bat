@@ -37,7 +37,7 @@ for /f "tokens=*" %%i in (%inputFile%) do (
     set "shop=pdm" REM Default shop, modify as needed
     REM -- Output the current vehicle being processed
     echo Adding vehicle: model=!model!, name=!name!
-    REM Append the new vehicle entry to the Lua file
+    REM -- Append the new vehicle entry to the Lua file
     (
     echo     {
     echo         model = '!model!',
@@ -55,5 +55,5 @@ echo } >> "%outputFile%"
 
 echo Vehicles have been added to %outputFile%.
 
-REM Wait for 10 seconds before closing
+REM -- Wait for 10 seconds before closing
 timeout /t 10 >nul
